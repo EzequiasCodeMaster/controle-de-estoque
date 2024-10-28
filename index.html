@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Estoque - Fábrica de Espetos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento de Estoque - Fábrica de Espetos</h1>
+
+        <!-- Formulário para adicionar novo item -->
+        <div class="add-item-form">
+            <h2>Adicionar Novo Item</h2>
+            <label for="item-name">Nome do Produto:</label>
+            <input type="text" id="item-name" placeholder="Digite o nome do produto">
+
+            <label for="item-quantity">Quantidade:</label>
+            <input type="number" id="item-quantity" placeholder="Digite a quantidade">
+
+            <button onclick="addItem()">Adicionar Item</button>
+        </div>
+
+        <!-- Formulário para remover item -->
+        <div class="remove-item-form">
+            <h2>Remover Item do Estoque</h2>
+            <label for="remove-item-name">Nome do Produto:</label>
+            <input type="text" id="remove-item-name" placeholder="Digite o nome do produto">
+
+            <label for="remove-item-quantity">Quantidade a Remover:</label>
+            <input type="number" id="remove-item-quantity" placeholder="Digite a quantidade a ser removida">
+
+            <button onclick="removeItem()">Remover Item</button>
+        </div>
+
+        <!-- Tabela de controle de estoque -->
+        <div class="stock-table">
+            <h2>Estoque Atual</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Produto</th>
+                        <th>Quantidade Total</th>
+                        <th>Data de Entrada</th>
+                        <th>Quantidade Saída</th>
+                        <th>Data de Saída</th>
+                    </tr>
+                </thead>
+                <tbody id="stock-table-body">
+                    <!-- Os itens do estoque serão adicionados aqui dinamicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabela de itens retirados -->
+        <div class="removed-items-table">
+            <h2>Itens Retirados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantidade Retirada</th>
+                        <th>Data da Retirada</th>
+                    </tr>
+                </thead>
+                <tbody id="removed-items-table-body">
+                    <!-- Os itens retirados serão inseridos aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
